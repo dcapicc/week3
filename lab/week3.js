@@ -31,40 +31,70 @@ document.addEventListener('DOMContentLoaded', async function() {
 
   // PART 1
   // Figure out how products there are, and store that number in memory
+  let products = data.products
+  console.log(`There are ${products.length} products`)
 
-  // Figure out how promotions there are, and store that number in memory
+    // Figure out how promotions there are, and store that number in memory
+  let promotions = data.promotions
+  console.log(`There are ${promotions.length} promotions`)
 
-  // Write the number of products to the JavaScript console
+    // Write the number of products to the JavaScript console
 
-  // Write the number of promotions to the JavaScript console
 
-  // PART 2
-  // Store the first product in memory
+    // Write the number of promotions to the JavaScript console
 
-  // Write the first product to the JavaScript console, on three separate lines
+    // PART 2
+    // Store the first product in memory
+  let product = products[0]
 
-  // Repeat for the 2nd and 3rd products
-  // Store the second product in memory
+    // Write the first product to the JavaScript console, on three separate lines
+  console.log(product.name)
+  console.log(product.description)
+  console.log(`$${product.price} each`)
+    // Repeat for the 2nd and 3rd products
+    // Store the second product in memory
+  product = products[1]
+    // Write the product to the JavaScript console, on three separate lines
+  console.log(product.name)
+  console.log(product.description)
+  console.log(product.price)
+    // Store the third product in memory
+  product = products[2]
+    // Write the product to the JavaScript console, on three separate lines
+  console.log(product.name)
+  console.log(product.description)
+  console.log(product.price)
 
-  // Write the product to the JavaScript console, on three separate lines
-  
-  // Store the third product in memory
+    // PART 3
+    // Get a random integer between 1 and 10
+  let random = getRandomInt(10)
 
-  // Write the product to the JavaScript console, on three separate lines
+    // Subtract one from that random integer because Arrays are zero-based
+  let arrayrandom = random - 1
+    // Use the random integer to grab a promotion from the Array of promotions
+    // and store it in memory
 
-  // PART 3
-  // Get a random integer between 1 and 10
+  let promotion = data.promotions[arrayrandom]
 
-  // Subtract one from that random integer because Arrays are zero-based
+  let discount = `🤑`
+  let shipping = `🚛`
+  let contest = `🏆`
+  // //   - Discount = 🤑
+  // //   - Shipping = 🚛
+  // //   - Contest = 🏆
+  let emoji
+  if (promotion == `discount`) {emoji = discount
+  } else if (promotion == `shipping`) {emoji = shipping
+  } else {emoji = contest}
 
-  // Use the random integer to grab a promotion from the Array of promotions
-  // and store it in memory
-  
-  // Figure out which emoji should be displayed, store it in memory (you will need
-  // an empty variable for this before you write any conditional)
+  console.log(`${emoji} ${promotion.description}`)
+    
+  //   // Figure out which emoji should be displayed, store it in memory (you will need
+  //   // an empty variable for this before you write any conditional)
 
-  // Create a sentence that displays the emoji along with the description 
-  // of the promotion
+  //   // Create a sentence that displays the emoji along with the description 
+  //   // of the promotion
+  //   console.log(${emoji} ${promotion.description})
 
   // Write the sentence to the JavaScript console
 
